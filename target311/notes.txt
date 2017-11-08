@@ -1,0 +1,79 @@
+c2(\n.{8}| )84(\n.{8}| )db(\n.{8}| )c3
+
+
+4019b8		b8 01 00 00 00 c3 c7 07
+4019c0		48 89 c7 c7 c3 8d 87 48
+4019c8		89 c7 c3 c3 8d 87 48 89
+4019d0		c7 c7 c3 b8 58 c2 d1 7c
+4019d8		c3 b8 6c ea 32 58 c3 b8
+4019e0		48 89 c7 90 c3 b8 4e c2
+4019e8		82 58 c3 c7 07 dd 58 91
+4019f0		90 c3 b8 01 00 00 00 c3
+4019f8		48 8d 04 37 c3 8d 87 9d
+401a00		c9 d1 90 c3 b8 48 89 e0
+401a08		c2 c3 c7 07 89 ce c7 30
+401a10		c3 8d 87 80 89 c2 c3 c3
+401a18		8d 87 89 c2 84 d2 c3 c7
+401a20		07 89 ce 94 c0 c3 b8 48
+401a28		89 e0 c3 c3 8d 87 5f 81
+401a30		d1 90 c3 8d 87 22 81 c2
+401a38		c3 c3 b8 25 a9 c2 90 c3
+401a40		c7 07 e2 3f 89 d1 c3 c7
+401a48		07 48 88 e0 c3 c3 c7 07
+401a50		8b ce 84 db c3 8d 87 89
+401a58		ce 38 d2 c3 8d 87 89 d1
+401a60		a4 c9 c3 8d 87 48 99 e0
+401a68		90 c3 c7 07 09 c2 84 db
+401a70		c3 8d 87 89 c2 18 d2 c3
+401a78		c7 07 89 c2 00 db c3 b8
+401a80		09 d1 84 c0 c3 8d 87 89
+401a88		ce 90 c3 c3 c7 07 88 d1
+401a90		84 db c3 b8 89 c2 94 90
+401a98		c3 8d 87 0a 89 d1 94 c3
+401aa0		8d 87 48 89 e0 c7 c3 c7
+401aa8		07 48 89 e0 c2 c3 c7 07
+401ab0		89 ce 18 c0 c3 c7 07 48
+401ab8		89 e0 c3 c3 8d 87 89 d1
+401ac0		20 db c3 8d 87 8d ce 84
+401ac8		db c3 b8 89 ce 60 db c3
+401ad0		b8 99 48 88 e0 c3 b8 01
+401ad8		00 00 00 c3
+
+
+4019b8 <start_farm>:   b8 01 00 00 00 c3 c7 07
+4019c0 <setval_426+2>: 48 89 c7 c7 c3 8d 87 [48
+4019c8 <addval_105+3>: [89 c7 c3 c3] 8d 87 48 89 //movq/l eax, edi
+4019d0 <addval_278+4>: c7 c7 c3 b8 58 c2 d1 7c
+4019d8 <getval_391+5>: c3 b8 6c ea 32 58 c3 b8
+4019e0 <getval_369+1>: [48 [89 c7 90 c3] b8 4e c2 //movq/l eax, edi
+4019e8 <getval_433+3>: 82 58 c3 c7 07 dd 58 91
+4019f0 <setval_154+5>: 90 c3 b8 01 00 00 00 c3
+4019f8 <add_xy>:       48 8d 04 37 c3 8d 87 9d
+401a00 <addval_343+3>: c9 d1 90 c3 b8 48 89 e0
+401a08 <getval_125+4>: c2 c3 c7 07 89 ce c7 30
+401a10 <setval_286+6>: c3 8d 87 80 [89 c2 c3] c3 //movl eax, edx 
+401a18 <addval_121>:   8d 87 89 c2 84 d2 c3 c7
+401a20 <setval_143+1>: 07 89 ce 94 c0 c3 b8 [48
+401a28 <getval_226+2>: [89 e0 c3] c3 8d 87 5f 81 //movq/l rsp, rax
+401a30 <addval_472+4>: d1 90 c3 8d 87 22 81 c2
+401a38 <addval_299+5>: c3 c3 b8 25 a9 c2 90 c3
+401a40 <setval_341>:   c7 07 e2 3f [89 d1 c3] c7 //movl edx, ecx
+401a48 <setval_126+1>: 07 48 88 e0 c3 c3 c7 07
+401a50 <setval_300+2>: 8b ce 84 db c3 8d 87 89
+401a58 <addval_140+3>: ce 38 d2 c3 8d 87 89 d1
+401a60 <addval_280+4>: a4 c9 c3 8d 87 48 99 e0
+401a68 <addval_135+5>: 90 c3 c7 07 09 c2 84 db
+401a70 <setval_159+6>: c3 8d 87 89 c2 18 d2 c3
+401a78 <setval_185>:   c7 07 89 c2 00 db c3 b8
+401a80 <getval_471+1>: 09 d1 84 c0 c3 8d 87 [89 //movl ecx, esi
+401a88 <addval_482+3>: ce 90 c3] c3 c7 07 88 d1
+401a90 <setval_193+4>: 84 db c3 b8 89 c2 94 90
+401a98 <getval_458+5>: c3 8d 87 0a 89 d1 94 c3
+401aa0 <addval_206>:   8d 87 48 89 e0 c7 c3 c7
+401aa8 <setval_461+1>: 07 48 89 e0 c2 c3 c7 07
+401ab0 <setval_382+2>: 89 ce 18 c0 c3 c7 07 48
+401ab8 <setval_386+3>: 89 e0 c3 c3 8d 87 89 d1
+401ac0 <addval_277+4>: 20 db c3 8d 87 8d ce 84
+401ac8 <addval_424+5>: db c3 b8 89 ce 60 db c3
+401ad0 <getval_166>:   b8 99 48 88 e0 c3 b8 01
+401ad8 <end_farm+2>:   00 00 00 c3

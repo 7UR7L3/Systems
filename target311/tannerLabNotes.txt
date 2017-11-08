@@ -1,0 +1,72 @@
+Gets() // reads input into some memory locatino from console
+
+type input: asdfasdfasdf
+
+Gets(*buffer)
+
+array[10]
+array: [0, 0, 0, 0, 0, 0, 0, 0, 0]
+gets(array)
+
+"asdf"
+
+array: ['a', 's', 'd, 'f', \0, 2345, 757, 234, 54243, 262]
+
+
+
+asdf
+asdfadsf
+adasd
+<return address>
+<rbp> <- rbp <- rsp
+
+
+
+a(){ getbuf() ; fasdfas; }
+
+c()
+
+
+
+
+							ret addr // we are changing this to be 0x401863 as that is the address of touch1
+getbuf stack frame:			rbp: 5fe8
+							// empty space for buf
+							buf: 41b8 // p &buf // char* of size 48
+
+
+
+aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa /* could put code to move cookie into argument register anywhere in here */
+aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa /* we've filled up the buffer completely at this point */
+aa aa aa aa aa aa aa aa /* this is what will be popped into rbp. we don't care where it thinks the previous stack frame is cuz we're hackers */
+aa aa aa aa aa aa aa aa /* return address: jump to actual code i wrote either in this stack or above the ret addr if i want to keep writing more */
+
+level 3 just involves storing cookie as string and moving the address to it into the argument register
+
+
+level 4: return oriented programming
+
+ret: pop ret addr into whatever, jump there
+
+
+so if we overflow stack like so:
+
+                         <new ret addr 3>
+                         <new ret addr 2>
+<proper ret addr>        <new ret addr 1>
+<proper rbp>        ->   <junk: we can stay in this stack frame>
+<some shit>              <junk: aa's>
+
+where new ret addrs have instruction "retq", it will pop the next address and jump to it
+			(because we didn't set up a proper stack frame which would push a proper address)
+
+
+
+so for phase 4 we have to get the cookie value (as an int) into rdi then call touch2
+and for phase 5 we have to do the same but with a string pointer in rdi and calling touch3
+
+so get hex from start_farm and look for instructions before c3 that could be used to do ^

